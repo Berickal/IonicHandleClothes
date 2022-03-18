@@ -1,0 +1,7 @@
+{
+  "name": "IonicAppClothe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
