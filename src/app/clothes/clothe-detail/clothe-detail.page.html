@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> <ion-back-button defaultHref="/"></ion-back-button> </ion-buttons>
+    <ion-title>{{clothe.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <ion-buttons id="update-btn">
+          <ion-button (click)="goEditItemForm()">Modifier</ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col id="img-container" >
+        <ion-img [src]="clothe.imgUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col id="item-name">
+        {{clothe.name | uppercase}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label>Taille : </ion-label>  {{clothe.size}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label>Categorie : </ion-label>  {{clothe.moreInfo.category}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label>Couleur : </ion-label>  {{clothe.moreInfo.color}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="flex" id="item-price">
+        ${{clothe.price}} <ion-badge *ngIf="clothe.moreInfo.status" color="warning">solde</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-buttons id="remove-btn">
+    <ion-button (click)="remove()">Supprimer</ion-button>
+  </ion-buttons>
+
+</ion-content>

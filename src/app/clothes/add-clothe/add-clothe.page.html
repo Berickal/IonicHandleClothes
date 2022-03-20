@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> <ion-back-button defaultHref="/"></ion-back-button> </ion-buttons>
+    <ion-title>Ajouter un article</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="clotheForm" (ngSubmit)="save()">
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Prix</ion-label>
+      <ion-input formControlName="price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Taille</ion-label>
+      <ion-input formControlName="size"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Lien image</ion-label>
+      <ion-input formControlName="imgLink"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Couleur</ion-label>
+      <ion-input formControlName="color"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Categorie</ion-label>
+      <ion-select formControlName="category">
+        <ion-select-option value="homme"> <span class="dark-select">Homme</span> </ion-select-option>
+        <ion-select-option value="femme"> <span class="dark-select">Femme</span> </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button type="submit">Enregistrer</ion-button>
+
+  </form>
+</ion-content>

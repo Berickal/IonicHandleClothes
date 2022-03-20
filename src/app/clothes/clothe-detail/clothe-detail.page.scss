@@ -1,0 +1,21 @@
+ion-content *{font-size: 12px;}
+
+#item-name, #item-price{font-size: 16px; font-weight: 600; display: flex; justify-content: center; align-items: center;}
+
+#item-price ion-badge{margin-left: 5px;}
+
+#img-container{margin: 0px 5px; height: 200px; overflow-y: hidden; width: 100%;}
+
+ion-col{margin: 10px 0px;}
+
+ion-label{font-weight: 600;}
+
+#remove-btn, #update-btn{
+  background: transparent;
+  box-shadow: none;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+#remove-btn{color: #f8333cff;}
+#update-btn{color: #2b9eb3ff; float: right;}

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tous les articles ({{clothes.length}})</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let item of clothes" (click)="showDetail(item.id)">
+      <ion-avatar slot="start">
+        <ion-img [src]="item.imgUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h3>{{item.name}}</h3>
+        <p class="flex-center">{{item.price}} <ion-badge *ngIf="item.moreInfo.status" color="warning">solde</ion-badge></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-buttons id="add-btn">
+    <ion-button routerLink="add-clothe" slot="fixed" >
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-content>
